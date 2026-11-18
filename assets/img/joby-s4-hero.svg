@@ -1,0 +1,176 @@
+<svg class="hero-art" viewBox="0 0 920 660" role="img" aria-labelledby="heroArtTitle heroArtDesc" xmlns="http://www.w3.org/2000/svg">
+  <title id="heroArtTitle">Joby S4 六倾转旋翼 eVTOL 示意图</title>
+  <desc id="heroArtDesc">俯视示意图：机身、机翼、V 尾与六具倾转螺旋桨，外围是雷达式同心圆和飞行轨迹。</desc>
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4fbff"/>
+      <stop offset=".42" stop-color="#bad9ee"/>
+      <stop offset="1" stop-color="#5d87a6"/>
+    </linearGradient>
+    <linearGradient id="wingGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff6ff"/>
+      <stop offset=".55" stop-color="#8db9d3"/>
+      <stop offset="1" stop-color="#456d89"/>
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#18314a"/>
+      <stop offset="1" stop-color="#08131f"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity=".22"/>
+      <stop offset=".62" stop-color="#2dd4bf" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M46 0H0V46" fill="none" stroke="#7dd3fc" stroke-opacity=".10" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="660" fill="transparent"/>
+  <rect width="920" height="660" fill="url(#grid)"/>
+  <ellipse cx="460" cy="330" rx="390" ry="285" fill="url(#halo)"/>
+
+  <!-- radar rings -->
+  <g fill="none" stroke="#2dd4bf" stroke-opacity=".32">
+    <ellipse cx="460" cy="330" rx="330" ry="242" stroke-dasharray="2 10"/>
+    <ellipse cx="460" cy="330" rx="252" ry="184" stroke-dasharray="2 12" stroke-opacity=".24"/>
+    <ellipse cx="460" cy="330" rx="176" ry="128" stroke-dasharray="1 14" stroke-opacity=".18"/>
+  </g>
+  <g stroke="#7dd3fc" stroke-opacity=".18">
+    <path d="M70 330h780M460 44v572"/>
+    <path d="M120 120l680 420M800 120L120 540" stroke-dasharray="3 9"/>
+  </g>
+
+  <!-- flight path -->
+  <path d="M52 536c112-18 176-82 224-160 44-72 92-132 184-144 102-13 182-52 252-96"
+        fill="none" stroke="#f0a83a" stroke-opacity=".55" stroke-width="1.6" stroke-dasharray="5 9"/>
+  <circle cx="52" cy="536" r="4" fill="#f0a83a"/>
+  <circle cx="712" cy="136" r="4" fill="#f0a83a"/>
+
+  <!-- aircraft -->
+  <g filter="url(#shadow)">
+    <!-- V tail -->
+    <path d="M447 430 396 548l24 12 48-78Z" fill="url(#wingGrad)" stroke="#d8f3ff" stroke-opacity=".55"/>
+    <path d="M473 430 524 548l-24 12-48-78Z" fill="url(#wingGrad)" stroke="#d8f3ff" stroke-opacity=".55"/>
+    <path d="M372 456h176l18 17H354Z" fill="url(#wingGrad)" stroke="#d8f3ff" stroke-opacity=".4"/>
+
+    <!-- main wing -->
+    <path d="M166 314c58-18 120-26 206-28h176c86 2 148 10 206 28-58 20-120 28-206 30H372c-86-2-148-10-206-30Z"
+          fill="url(#wingGrad)" stroke="#e4f8ff" stroke-opacity=".6"/>
+    <path d="M228 311c80-9 156-12 232-12s152 3 232 12" fill="none" stroke="#0a1526" stroke-opacity=".22"/>
+
+    <!-- fuselage -->
+    <path d="M460 86c30 44 42 108 44 176v146c-2 64-18 106-44 136-26-30-42-72-44-136V262c2-68 14-132 44-176Z"
+          fill="url(#bodyGrad)" stroke="#f0fbff" stroke-opacity=".7"/>
+    <path d="M460 102c22 40 31 96 33 158v140c-2 56-13 92-33 116-20-24-31-60-33-116V260c2-62 11-118 33-158Z"
+          fill="#0a1526" fill-opacity=".18"/>
+    <path d="M438 168c12-18 32-18 44 0 7 11 11 26 12 42h-68c1-16 5-31 12-42Z" fill="#07131f" stroke="#7dd3fc" stroke-opacity=".4"/>
+    <path d="M449 186c5-7 17-7 22 0 3 5 5 12 6 19h-34c1-7 3-14 6-19Z" fill="#2dd4bf" fill-opacity=".55"/>
+
+    <!-- cabin windows -->
+    <g fill="#07131f" stroke="#7dd3fc" stroke-opacity=".35">
+      <rect x="438" y="284" width="18" height="10" rx="5"/>
+      <rect x="464" y="284" width="18" height="10" rx="5"/>
+      <rect x="438" y="306" width="18" height="10" rx="5"/>
+      <rect x="464" y="306" width="18" height="10" rx="5"/>
+    </g>
+
+    <!-- wing nacelles + propellers -->
+    <g class="prop-cluster">
+      <!-- left inner/outer, right inner/outer -->
+      <g transform="translate(270 306)">
+        <ellipse cx="0" cy="0" rx="39" ry="39" fill="#2dd4bf" fill-opacity=".07" stroke="#7dd3fc" stroke-opacity=".22"/>
+        <g class="prop prop-a">
+          <path d="M0-36C9-22 9-8 0 0 9 8 9 22 0 36-9 22-9 8 0 0-9-8-9-22 0-36Z" fill="#bff7ee" fill-opacity=".7"/>
+          <path d="M31 18C17 15 7 8 0 0-7-8-17-15-31-18-17-22-7-15 0 0 7 15 17 22 31 18Z" fill="#bff7ee" fill-opacity=".32"/>
+        </g>
+        <circle r="8" fill="#07131f" stroke="#2dd4bf"/>
+        <rect x="-33" y="-13" width="66" height="26" rx="13" fill="url(#darkGrad)" stroke="#7dd3fc" stroke-opacity=".55"/>
+        <circle r="5" fill="#2dd4bf"/>
+      </g>
+      <g transform="translate(372 306)">
+        <ellipse cx="0" cy="0" rx="39" ry="39" fill="#2dd4bf" fill-opacity=".07" stroke="#7dd3fc" stroke-opacity=".22"/>
+        <g class="prop prop-b">
+          <path d="M0-36C9-22 9-8 0 0 9 8 9 22 0 36-9 22-9 8 0 0-9-8-9-22 0-36Z" fill="#bff7ee" fill-opacity=".7"/>
+          <path d="M31 18C17 15 7 8 0 0-7-8-17-15-31-18-17-22-7-15 0 0 7 15 17 22 31 18Z" fill="#bff7ee" fill-opacity=".32"/>
+        </g>
+        <circle r="8" fill="#07131f" stroke="#2dd4bf"/>
+        <rect x="-33" y="-13" width="66" height="26" rx="13" fill="url(#darkGrad)" stroke="#7dd3fc" stroke-opacity=".55"/>
+        <circle r="5" fill="#2dd4bf"/>
+      </g>
+      <g transform="translate(548 306)">
+        <ellipse cx="0" cy="0" rx="39" ry="39" fill="#2dd4bf" fill-opacity=".07" stroke="#7dd3fc" stroke-opacity=".22"/>
+        <g class="prop prop-c">
+          <path d="M0-36C9-22 9-8 0 0 9 8 9 22 0 36-9 22-9 8 0 0-9-8-9-22 0-36Z" fill="#bff7ee" fill-opacity=".7"/>
+          <path d="M31 18C17 15 7 8 0 0-7-8-17-15-31-18-17-22-7-15 0 0 7 15 17 22 31 18Z" fill="#bff7ee" fill-opacity=".32"/>
+        </g>
+        <circle r="8" fill="#07131f" stroke="#2dd4bf"/>
+        <rect x="-33" y="-13" width="66" height="26" rx="13" fill="url(#darkGrad)" stroke="#7dd3fc" stroke-opacity=".55"/>
+        <circle r="5" fill="#2dd4bf"/>
+      </g>
+      <g transform="translate(650 306)">
+        <ellipse cx="0" cy="0" rx="39" ry="39" fill="#2dd4bf" fill-opacity=".07" stroke="#7dd3fc" stroke-opacity=".22"/>
+        <g class="prop prop-d">
+          <path d="M0-36C9-22 9-8 0 0 9 8 9 22 0 36-9 22-9 8 0 0-9-8-9-22 0-36Z" fill="#bff7ee" fill-opacity=".7"/>
+          <path d="M31 18C17 15 7 8 0 0-7-8-17-15-31-18-17-22-7-15 0 0 7 15 17 22 31 18Z" fill="#bff7ee" fill-opacity=".32"/>
+        </g>
+        <circle r="8" fill="#07131f" stroke="#2dd4bf"/>
+        <rect x="-33" y="-13" width="66" height="26" rx="13" fill="url(#darkGrad)" stroke="#7dd3fc" stroke-opacity=".55"/>
+        <circle r="5" fill="#2dd4bf"/>
+      </g>
+
+      <!-- tail props -->
+      <g transform="translate(409 487) scale(.78)">
+        <ellipse cx="0" cy="0" rx="39" ry="39" fill="#2dd4bf" fill-opacity=".07" stroke="#7dd3fc" stroke-opacity=".22"/>
+        <g class="prop prop-e">
+          <path d="M0-36C9-22 9-8 0 0 9 8 9 22 0 36-9 22-9 8 0 0-9-8-9-22 0-36Z" fill="#bff7ee" fill-opacity=".7"/>
+          <path d="M31 18C17 15 7 8 0 0-7-8-17-15-31-18-17-22-7-15 0 0 7 15 17 22 31 18Z" fill="#bff7ee" fill-opacity=".32"/>
+        </g>
+        <circle r="8" fill="#07131f" stroke="#2dd4bf"/>
+        <rect x="-33" y="-13" width="66" height="26" rx="13" fill="url(#darkGrad)" stroke="#7dd3fc" stroke-opacity=".55"/>
+        <circle r="5" fill="#2dd4bf"/>
+      </g>
+      <g transform="translate(511 487) scale(.78)">
+        <ellipse cx="0" cy="0" rx="39" ry="39" fill="#2dd4bf" fill-opacity=".07" stroke="#7dd3fc" stroke-opacity=".22"/>
+        <g class="prop prop-f">
+          <path d="M0-36C9-22 9-8 0 0 9 8 9 22 0 36-9 22-9 8 0 0-9-8-9-22 0-36Z" fill="#bff7ee" fill-opacity=".7"/>
+          <path d="M31 18C17 15 7 8 0 0-7-8-17-15-31-18-17-22-7-15 0 0 7 15 17 22 31 18Z" fill="#bff7ee" fill-opacity=".32"/>
+        </g>
+        <circle r="8" fill="#07131f" stroke="#2dd4bf"/>
+        <rect x="-33" y="-13" width="66" height="26" rx="13" fill="url(#darkGrad)" stroke="#7dd3fc" stroke-opacity=".55"/>
+        <circle r="5" fill="#2dd4bf"/>
+      </g>
+    </g>
+
+    <!-- wingtip lights -->
+    <circle cx="170" cy="314" r="3.6" fill="#f0a83a" filter="url(#glow)"/>
+    <circle cx="750" cy="314" r="3.6" fill="#2dd4bf" filter="url(#glow)"/>
+  </g>
+
+  <!-- labels -->
+  <g font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" fill="#d8f3ff">
+    <g stroke="#2dd4bf" stroke-opacity=".45" fill="none">
+      <path d="M94 210h78l54 62" stroke-dasharray="3 5"/>
+      <path d="M806 232h-84l-52 54" stroke-dasharray="3 5"/>
+      <path d="M742 506h-76l-62-20" stroke-dasharray="3 5"/>
+    </g>
+    <text x="94" y="200" fill="#8ff5e7" letter-spacing=".08em">6 具倾转螺旋桨</text>
+    <text x="94" y="220" fill="#a9bdd0" font-size="11">垂直起降 → 翼载巡航</text>
+    <text x="806" y="222" text-anchor="end" fill="#8ff5e7" letter-spacing=".08em">翼载巡航布局</text>
+    <text x="806" y="242" text-anchor="end" fill="#a9bdd0" font-size="11">巡航效率与噪声折中</text>
+    <text x="742" y="496" fill="#8ff5e7" letter-spacing=".08em">V 尾 + 冗余推力</text>
+    <text x="742" y="516" fill="#a9bdd0" font-size="11">六电机、多层级冗余</text>
+  </g>
+
+  <g font-family="Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="52" y="620" fill="#7f93a7" font-size="10" letter-spacing=".14em">SCHEMATIC · NOT TO SCALE</text>
+    <text x="868" y="620" text-anchor="end" fill="#7f93a7" font-size="10">JOBY S4 / CONCEPTUAL TOP VIEW</text>
+  </g>
+</svg>
